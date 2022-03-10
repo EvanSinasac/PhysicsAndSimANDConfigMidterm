@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{aca6ff65-0002-43aa-8f3c-8ef67845c2fa}</ProjectGuid>
+    <RootNamespace>MidtermPhysicsAndConifgEvanSinasac</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>
+    </LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)common\include;$(ProjectDir)include;$(SolutionDir)common\glew\include;$(SolutionDir)common\FreeImage\include;$(SolutionDir)common\assimp\include;$(SolutionDir)common\rapidjson;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)common\lib\x64\debug;$(LibraryPath);$(SolutionDir)common\glew\lib\$(Platform);$(SolutionDir)common\FreeImage\lib\$(Platform)\$(Configuration);$(SolutionDir)common\assimp\lib\$(Platform)\$(Configuration)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)common\include;$(ProjectDir)include;$(SolutionDir)common\glew\include;$(SolutionDir)common\FreeImage\include;$(SolutionDir)common\assimp\include;$(SolutionDir)common\rapidjson;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)common\lib\x64\release;$(LibraryPath);$(SolutionDir)Extern\glew\lib\$(Platform);$(SolutionDir)Extern\FreeImage\lib\$(Platform)\$(Configuration);$(SolutionDir)common\assimp\lib\$(Platform)\$(Configuration)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;glew32s.lib;OpenGL32.lib;assimp-vc142-mtd.lib;FreeImaged.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))";_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;glew32s.lib;OpenGL32.lib;assimp-vc142-mtd.lib;FreeImaged.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)common\lib\x64\debug\\*.dll" "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>SOLUTION_DIR=R"($(SolutionDir))";NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;glew32s.lib;OpenGL32.lib;assimp-vc142-mt.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)common\lib\x64\release\\*.dll" "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\glad.c" />
+    <ClCompile Include="src\cConfigReaderJSON.cpp" />
+    <ClCompile Include="src\physics\cCannonBall.cpp" />
+    <ClCompile Include="src\physics\cCannonShot.cpp" />
+    <ClCompile Include="shaderManager\cMesh.cpp" />
+    <ClCompile Include="shaderManager\cShader.cpp" />
+    <ClCompile Include="shaderManager\cShaderManager.cpp" />
+    <ClCompile Include="shaderManager\cVAOManager.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\physics\cBullet.cpp" />
+    <ClCompile Include="src\physics\cEnergyBall.cpp" />
+    <ClCompile Include="src\physics\cLaser.cpp" />
+    <ClCompile Include="src\physics\cParticle.cpp" />
+    <ClCompile Include="src\physics\cParticleWorld.cpp" />
+    <ClCompile Include="src\physics\random_Helpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\cConfigReaderJSON.h" />
+    <ClInclude Include="include\physics\cBullet.h" />
+    <ClInclude Include="include\physics\cCannonBall.h" />
+    <ClInclude Include="include\physics\cCannonShot.h" />
+    <ClInclude Include="include\physics\cEnergyBall.h" />
+    <ClInclude Include="include\physics\cLaser.h" />
+    <ClInclude Include="include\physics\cParticle.h" />
+    <ClInclude Include="include\physics\cParticleWorld.h" />
+    <ClInclude Include="include\physics\random_Helpers.h" />
+    <ClInclude Include="shaderManager\cMesh.h" />
+    <ClInclude Include="shaderManager\cShaderManager.h" />
+    <ClInclude Include="shaderManager\cVAOManager.h" />
+    <ClInclude Include="src\GLCommon.h" />
+    <ClInclude Include="src\GLMCommon.h" />
+    <ClInclude Include="src\sVertex_types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config.json" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <!-- Begin distribution stuff-->
+  <PropertyGroup>
+    <DistributionFolderName>Dist</DistributionFolderName>
+    <AssetsFolder>$(ProjectDir)../common/assets</AssetsFolder>
+    <DistributionPath>$(ProjectDir)$(DistributionFolderName)</DistributionPath>
+  </PropertyGroup>
+   <ItemGroup>
+    <!-- the executable -->
+    <DistributionCopyFiles Include="$(ProjectDir)..\$(Platform)\$(Configuration)\$(TargetName)$(TargetExt)"/>
+    <DistributionCopyFiles Include="$(ProjectDir)Config.json"/>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <!-- the dynamic library dependencies -->
+    <DistributionCopyFiles Include="$(OutDir)assimp-vc142-mt.dll"/>
+    <DistributionCopyFiles Include="$(OutDir)FreeImage.dll"/>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <!-- the dynamic library dependencies -->
+    <DistributionCopyFiles Include="$(OutDir)assimp-vc142-mtd.dll"/>
+    <DistributionCopyFiles Include="$(OutDir)FreeImaged.dll"/>
+  </ItemGroup>
+  <!-- Begin option 1 for copying asset subfolders -->
+  <!--
+  <ItemGroup>
+    <AssetShaderFiles Include="$(AssetsFolder)\shaders\fragShader_01.glsl"/>
+    <AssetShaderFiles Include="$(AssetsFolder)\shaders\vertShader_01.glsl"/>
+    <DistributionAssetCopyFiles Include="$(AssetsFolder)\models\*.*"/>
+  </ItemGroup>
+  -->
+  <!-- End option 1 for copying asset subfolders -->
+  <!-- Begin option 2 for copying asset subfolders -->
+  <ItemGroup>
+    <DistributionAssetCopyFiles Include="$(AssetsFolder)\**\*.*"/>
+  </ItemGroup>
+  <!-- End option 2 for copying asset subfolders -->
+
+  <Target Name="CreateDistributionFolder">
+    <Message Text="Creating the distribution folder"/>
+    <MakeDir Directories="$(DistributionPath)"/>
+  </Target>
+  <Target Name="AfterBuild" DependsOnTargets="CreateDistributionFolder">
+    <Message Text="Copying files into the distribution oflder"/>
+    <Copy SourceFiles="@(DistributionCopyFiles)" DestinationFolder="$(DistributionPath)\Bin"/>
+    
+    <!-- Begin option 1 for copying asset subfolder -->
+    <!--
+    <Message Text="Copying the Assets folder and contents (one level) into the distribution folder"/>
+    <Copy SourceFiles="@(DistributionAssetCopyFiles)" DestinationFolder="$(DistributionPath)\Assets"/>
+    <Message Text="Copying the Assets shader files into the distribution Asset shaders folder"/>
+    <Copy SourceFiles="@(AssetShaderFiles)" DestinationFolder="$(DistributionPath)\Assets\Shaders"/>
+    -->
+    <!-- End option 1 for copying asset subfolders -->
+    <Message Text="Copying Asset folder and contents recursively into the distribution folder"/>
+    <Copy SourceFiles="@(DistributionAssetCopyFiles)" DestinationFolder="$(DistributionPath)\Assets\%(RecursiveDir)"/>
+    <!-- End option 2 for copying asset subfolders-->
+
+    <Message Text="Creating distribution zip folder"/>
+    <Exec Command='"$(ProjectDir)7z.exe" a "$(ProjectDir)$(DistributionFolderName).zip" "$(DistributionPath)"'/>
+  </Target>
+</Project>

@@ -1,0 +1,38 @@
+{
+  "Cannon": {
+    "YawMax": 225.0,
+    "YawMin": 135.0,
+    "PitchMax": 158.0,
+    "PitchMin": 90.0,
+    "XPosition": 0.0,
+    "YPosition": 1.9,
+    "ZPosition": 0.0
+  },
+  "Bullet": {
+    "Size": 7.0,
+    "Damping": 0.995,
+    "Mass": 0.5,
+    "MuzzleVelocity": 15.0
+  },
+  "Laser": {
+    "Size": 8.0,
+    "Damping": 0.995,
+    "Mass": 0.1,
+    "MuzzleVelocity": 20.0,
+    "DistanceLimit": 100.0
+  },
+  "CannonBall": {
+    "Size": 12.0,
+    "Damping": 0.995,
+    "Mass": 2.0,
+    "MuzzleVelocity": 15.0
+  },
+  "EnergyBall": {
+    "Size": 20.0,
+    "Damping": 0.25,
+    "Mass": 100.0,
+    "MuzzleVelocity": 5.0,
+    "TimeLimit": 30.0,
+    "DistanceLimit": 500.0
+  }
+}
